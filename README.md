@@ -33,8 +33,24 @@ Archivos y Entornos Virtuales: Uso de variables de entorno (.env) para la protec
 Buenas Prácticas (PEP-8): Código limpio, estructurado y documentado que facilita su escalabilidad y revisión.
 
 💡 Ejemplos de Micro-Tips Automatizados
+
 🔊 Por voz: "¡Hola! Si vas a jugar por varias horas, recuerda reducir el brillo de tu pantalla un 10%. Ahorrarás energía sin darte cuenta."
 
 💬 Por texto (Clima lluvioso): 🌧️ "Está lloviendo en tu zona. Es un gran momento para recordar recolectar agua lluvia para las plantas o las tareas del hogar."
+
+
+Bibliotecas a Instalar (pip install)
+Estas son las fijas que vas a necesitar. Las puedes dejar anotadas en un archivo requirements.txt:
+
+discord.py (Para el bot de Discord y conectar a los canales de voz).
+
+requests (Para conectar con la API de clima).
+
+python-dotenv (Para ocultar el Token del bot de forma segura).
+
+gTTS o pyttsx3 (Para la síntesis de voz; revisaremos cuál te da mejor tono).
+
+PyNaCl (Obligatoria para que Discord te deje reproducir audio en canales de voz).
+
 
 💬 Por texto (Cotidiano): 🗑️ "Recordatorio de rutina: ¿Ya sacaste la basura y te aseguraste de clasificar los residuos en la caneca correspondiente?"
