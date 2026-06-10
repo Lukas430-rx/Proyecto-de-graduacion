@@ -4,7 +4,8 @@ Este proyecto ayuda a reducir un poco el cambio climatico.
 La idea que decidi tener propia de mi es la siguiente (Esta resumida por Gemini, ya que la idea original escrita por mi
 estaba algo desordenada pero esta que le pedi que me resumiera esta mucho mejor y sigue explicando mi idea principal):
 
-
+#Inicio de la idea/inspiracion
+#__________________________________________________________________________________________________________________________________________________________________________________________________________________
 EcoEcho Bot 🌍🎙️
 EcoEcho Bot es un asistente virtual para Discord desarrollado en Python, diseñado para mitigar los efectos del cambio climático a través de la neurociencia de los hábitos. El proyecto no busca imponer grandes sacrificios físicos, sino automatizar la educación ambiental en los entornos digitales donde los jóvenes pasan su tiempo, promoviendo micro-acciones y hábitos sostenibles cotidianos mediante interacciones de texto y síntesis de voz (TTS).
 
@@ -39,7 +40,7 @@ Buenas Prácticas (PEP-8): Código limpio, estructurado y documentado que facili
 💬 Por texto (Clima lluvioso): 🌧️ "Está lloviendo en tu zona. Es un gran momento para recordar recolectar agua lluvia para las plantas o las tareas del hogar."
 
 
-Bibliotecas a Instalar (pip install)
+# Bibliotecas a Instalar (pip install)
 Estas son las fijas que vas a necesitar. Las puedes dejar anotadas en un archivo requirements.txt:
 
 discord.py (Para el bot de Discord y conectar a los canales de voz).
@@ -54,3 +55,8 @@ PyNaCl (Obligatoria para que Discord te deje reproducir audio en canales de voz)
 
 
 💬 Por texto (Cotidiano): 🗑️ "Recordatorio de rutina: ¿Ya sacaste la basura y te aseguraste de clasificar los residuos en la caneca correspondiente?"
+#___________________________________________________________________________________________________________________________________________________________________________________________________________________
+#Fin de la idea
+
+
+# Una pequeña nota para los articulos que tal vez ayuden en futuro. (https://www.un.org/es/climatechange/science/causes-effects-climate-change), (https://www.un.org/es/un75/climate-crisis-race-we-can-win)
