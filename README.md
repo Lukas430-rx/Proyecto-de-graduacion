@@ -60,3 +60,65 @@ PyNaCl (Obligatoria para que Discord te deje reproducir audio en canales de voz)
 
 
 # Una pequeña nota para los articulos que tal vez ayuden en futuro. (https://www.un.org/es/climatechange/science/causes-effects-climate-change), (https://www.un.org/es/un75/climate-crisis-race-we-can-win)
+
+
+# Librerias y comandos de Entorno Virtual:
+
+Primer comando: python -m venv .venv (Para crear el entorno virtual aislado de Python)
+
+Segundo comando (Para activarlo En Windows (PowerShell): .venv\Scripts\Activate.ps1
+
+(Si les sale un error al colocar el .venv\Scripts\Activate.ps1, sigan estos pasos:
+
+
+Mira tu terminal abajo a la derecha. Arriba de las letras rojas, hay un menú desplegable que dice powershell junto a un icono de un bote de basura y un signo de más (+).
+
+Dale clic a la flechita que apunta hacia abajo que está al lado del signo +.
+
+Selecciona Command Prompt (o Git Bash si lo tienes instalado). Se te abrirá una pestaña de terminal nueva y limpia.
+
+En esa nueva terminal, ejecuta este comando para activarlo (ojo, cambia un poquito la barra diagonal porque es CMD):
+
+DOS
+.venv\Scripts\activate.bat
+Sabrás que funcionó perfectamente porque ahora verás las letras (.venv) al inicio de tu línea de comandos.)
+
+
+
+Estas son el resto de librerias (las puedes colocar en un nuevo archivo de el VS Code llamado requirements.txt):
+
+discord.py
+python-dotenv
+requests
+PyNaCl
+gTTS
+
+
+
+# Procedimientos despues de esto:
+
+Sigue estos pasos en esa misma terminal de Git Bash (donde dice (.venv)):
+
+Escribe el siguiente comando y presiona Enter:
+
+Bash
+pip install -r requirements.txt
+Verás que empiezan a salir un montón de líneas de texto mientras se descargan discord.py, gTTS y las demás librerías. Espera un momento a que termine y te vuelva a aparecer la línea normal para escribir.
+
+
+Hecho esto sin problemas, ahora se puede hacer esto:
+
+Siguiente Paso: Crear el archivo de configuración .env
+El Token del bot es como la contraseña maestra. Para no dejarlo expuesto en el código, lo vamos a guardar en un archivo oculto del sistema.
+
+En la parte izquierda de tu VS Code (en el explorador de archivos), crea un nuevo archivo llamado exactamente .env (ojo: empieza con un punto y no lleva ninguna extensión como .txt ni nada, solo .env).
+
+Abre el archivo y escribe lo siguiente dentro:
+
+Plaintext
+DISCORD_TOKEN=tu_token_secreto_aqui
+
+
+Ahora, ve a tu panel de desarrolladores de Discord (donde creaste el bot), copia el Token real y pégalo justo después del símbolo =, reemplazando el texto tu_token_secreto_aqui. (Asegúrate de que no queden espacios entre el = y tu token).
+
+Guarda el archivo con Ctrl + S.
