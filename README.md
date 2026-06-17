@@ -122,3 +122,63 @@ DISCORD_TOKEN=tu_token_secreto_aqui
 Ahora, ve a tu panel de desarrolladores de Discord (donde creaste el bot), copia el Token real y pégalo justo después del símbolo =, reemplazando el texto tu_token_secreto_aqui. (Asegúrate de que no queden espacios entre el = y tu token).
 
 Guarda el archivo con Ctrl + S.
+
+
+OJO: Asegúrate de que no haya espacios alrededor del signo igual (=). Debe ir la palabra DISCORD_TOKEN, luego el =, y de inmediato tu código secreto o Token. 
+
+
+Despues de esto, puedes continuar con:
+
+Copia este bloque de código y pégalo dentro de main.py:
+
+
+import os
+import discord
+from discord.ext import commands
+from dotenv import load_dotenv
+
+# Cargamos de forma manual las variables del archivo .env
+load_dotenv()
+TOKEN = os.getenv("DISCORD_TOKEN")
+
+
+# Creamos la clase principal de nuestro bot de forma organizada
+class MottainaiBot(commands.Bot):
+
+    def __init__(self):
+        # Configuramos los permisos (intents) necesarios para Discord
+        intents = discord.Intents.default()
+        intents.message_content = True  # Para leer comandos de texto
+        intents.voice_states = True     # Para detectar canales de voz luego
+
+        # Inicializamos el bot con el prefijo "!" y sus permisos
+        super().__init__(command_prefix="!", intents=intents)
+
+    # Evento automático que avisa cuando el bot se conecta a Discord
+    async def on_ready(self):
+        print("─" * 50)
+        print("✨ ¡MottainaiBot (もったいない) está en línea! ✨")
+        print(f"Conectado con éxito como: {self.user.name}")
+        print("─" * 50)
+
+
+# Punto de arranque de la aplicación
+if __name__ == "__main__":
+    bot = MottainaiBot()
+    bot.run(TOKEN)
+
+
+
+Una vez hecho esto. Siguiente Paso: ¡Encender el Bot!
+Una vez que pegues el código en main.py y lo guardes (Ctrl + S), sigue estos pasos para ponerlo en marcha:
+
+Ve a la terminal de Git Bash abajo (donde sale (.venv)).
+
+Escribe el comando para ejecutar tu archivo principal:
+
+Bash
+python main.py
+Presiona Enter.
+
+Si todo está bien configurado con el token y los permisos en el panel de Discord, deberías ver cómo se imprime en tu terminal el mensaje decorado:
+✨ ¡MottainaiBot (もったいない) está en línea! ✨
