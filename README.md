@@ -182,3 +182,111 @@ Presiona Enter.
 
 Si todo está bien configurado con el token y los permisos en el panel de Discord, deberías ver cómo se imprime en tu terminal el mensaje decorado:
 ✨ ¡MottainaiBot (もったいない) está en línea! ✨
+
+
+
+
+Sin embargo, si hay alguna falla en el codigo, aqui esta uno completo tipo "punto de control" funcional por si cualquier cosa.
+
+Codigo:
+
+
+import random
+import os
+import discord
+from discord.ext import commands
+from dotenv import load_dotenv
+
+
+load_dotenv()
+
+TOKEN = os.getenv("DISCORD_TOKEN")
+
+
+intents = discord.Intents.default()
+intents.message_content = True
+intents.voice_states = True
+
+
+bot = commands.Bot(
+    command_prefix="!",
+    intents=intents
+)
+
+
+tips_ecologicos = [
+    {
+        "categoria": "energia",
+        "texto": (
+            "Si vas a jugar o estudiar por varias horas, recuerda "
+            "reducir el brillo de tu pantalla un 10%. Ahorrarás."
+        )
+    },
+    {
+        "categoria": "energia",
+        "texto": (
+            "Terminaste de usar tu consola o PC? Recuerda apagar "
+            "la multitoma. En modo espera siguen consumiendo luz."
+        )
+    },
+    {
+        "categoria": "residuos",
+        "texto": (
+            "Recordatorio de rutina: Asegúrate de separar bien los "
+            "residuos. El plástico y cartón limpio van al reciclaje."
+        )
+    },
+    {
+        "categoria": "agua",
+        "texto": (
+            "Al lavarte los dientes, cierra la llave mientras te "
+            "cepillas. Es un micro-hábito que salva litros de agua."
+        )
+    }
+]
+
+
+@bot.event
+async def on_ready():
+
+    print("─" * 50)
+
+    print("✨ ¡MottainaiBot está en línea! ✨")
+
+    print(f"Conectado como: {bot.user}")
+
+    print("COMANDOS CARGADOS:")
+
+    for comando in bot.commands:
+        print(comando.name)
+
+    print("─" * 50)
+
+
+@bot.command(name="tip")
+async def enviar_tip(ctx):
+
+    tip = random.choice(tips_ecologicos)
+
+    await ctx.send(
+        f"🌱 **[Mottainai Tip]** {tip['texto']}"
+    )
+
+
+@bot.command(name="ecohelp")
+async def ecohelp(ctx):
+
+    mensaje = (
+        "🌍 **EcoEcho Bot - Comandos disponibles**\n\n"
+
+        "🌱 `!tip`\n"
+        "Muestra un consejo ecológico aleatorio.\n\n"
+
+        "📖 `!ecohelp`\n"
+        "Muestra la lista de comandos disponibles."
+    )
+
+    await ctx.send(mensaje)
+
+
+bot.run(TOKEN)
