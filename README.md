@@ -190,7 +190,7 @@ Sin embargo, si hay alguna falla en el codigo, aqui esta uno completo tipo "punt
 
 Codigo:
 
-
+'''
 import random
 import os
 import discord
@@ -290,3 +290,4 @@ async def ecohelp(ctx):
 
 
 bot.run(TOKEN)
+''' 
