@@ -600,6 +600,8 @@ bot.run(TOKEN)
 
 ## Aqui estan las iamgenes de el bot por si se las quieres colocar:
 
+
+## Bot:
 <img width="500" height="500" alt="LogoEcoEchoBot  MottainaiBot Definitivo" src="https://github.com/user-attachments/assets/3ebe7800-d92e-43e0-8c31-cdccc9b69190" />
 
 
