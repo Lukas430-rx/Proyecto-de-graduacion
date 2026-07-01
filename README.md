@@ -598,7 +598,7 @@ bot.run(TOKEN)
 
 ```
 
-## Aqui estan las iamgenes de el bot por si se las quieres colocar:
+## Aqui estan las iamgenes de el bot y el servidor por si se las quieres colocar:
 
 
 ## Bot:
