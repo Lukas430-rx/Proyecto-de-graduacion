@@ -455,7 +455,7 @@ async def enviar_recordatorios():
 
                 tip = random.choice(tips_ecologicos)
 
-                ultimo_tip = tip
+            ultimo_tip = tip
 
             await canal.send(
                 f"🌍 **EcoEcho Recordatorio**\n\n"
@@ -501,8 +501,8 @@ async def clima(ctx):
 
         consejo = (
             "❄️ Hace bastante frío. "
-            "Aprovecha la energía solar para calentar tu hogar o."
-            "O ponte ropa abrigada antes de encender calefaccion."
+            "Aprovecha la energía solar para calentar tu hogar "
+            "o cualquier sistema eléctrico para calentar el hogar."
         )
 
     elif temperatura <= 18:
@@ -544,6 +544,10 @@ async def ecohelp(ctx):
 
         "🤖 `!estado`\n"
         "Muestra el estado actual del bot.\n\n"
+
+        "🇯🇵 `!mottainai`\n"
+        "Explica la filosofía en que se basa el proyecto.\n\n"
+
     )
 
     await ctx.send(mensaje)
@@ -564,10 +568,32 @@ async def estado(ctx):
         f"📢 Canal automático: #{CANAL_RECORDATORIOS}\n\n"
 
         "✅ Sistema funcionando correctamente."
+
     )
 
     await ctx.send(mensaje)
 
+
+@bot.command(name="mottainai")
+async def mottainai(ctx):
+    mensaje = (
+        "🌸 **Filosofía Mottainai**\n\n"
+
+        "🇯🇵 Mottainai es una palabra japonesa que expresa el "
+        "sentimiento de que es un desperdicio tirar o malgastar "
+        "algo que todavía tiene valor.\n\n"
+
+        "♻️ EcoEcho Bot utiliza esta filosofía para fomentar "
+        "pequeños hábitos sostenibles, como ahorrar energía, "
+        "cuidar el agua, reutilizar objetos y reducir residuos.\n\n"
+
+        "💚 Cada pequeña acción cuenta cuando millones de personas "
+        "la convierten en un hábito."
+    )
+    await ctx.send(mensaje)
+
+
 bot.run(TOKEN)
+
 
 ```
