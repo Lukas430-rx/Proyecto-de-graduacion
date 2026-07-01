@@ -597,3 +597,12 @@ bot.run(TOKEN)
 
 
 ```
+
+## Aqui estan las iamgenes de el bot por si se las quieres colocar:
+
+<img width="500" height="500" alt="LogoEcoEchoBot  MottainaiBot Definitivo" src="https://github.com/user-attachments/assets/3ebe7800-d92e-43e0-8c31-cdccc9b69190" />
+
+
+# Imagen de el servidor:
+
+<img width="500" height="500" alt="LogoEcoEchoBot  MottainaiBot sin background" src="https://github.com/user-attachments/assets/6e6cbd92-3d60-4bfb-8b7b-1c6de06f4ce7" />
